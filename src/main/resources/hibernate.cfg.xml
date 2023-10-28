@@ -4,12 +4,17 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url"/>
-    <property name="connection.driver_class"/>
-    <!-- <property name="connection.username"/> -->
-    <!-- <property name="connection.password"/> -->
+    <property name="connection.url">jdbc:postgresql://localhost:5432/examen</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">root</property>
 
-    <!-- DB schema will be updated if needed -->
-    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    <mapping class="Progra2.DTO.Asignaciones"/>
+    <mapping class="Progra2.DTO.Cursos"/>
+    <mapping class="Progra2.DTO.Estudiantes"/>
+    <mapping class="Progra2.DTO.Usuarios"/>
+
+
   </session-factory>
+
 </hibernate-configuration>

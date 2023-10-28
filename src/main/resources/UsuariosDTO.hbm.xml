@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Progra2.UsuariosDTO" table="usuarios" schema="public" catalog="examen">
+    <class name="Progra2.DTO.UsuariosDTO" table="usuarios" schema="public" catalog="examen">
         <id name="usuario" column="usuario"/>
         <property name="nombre" column="nombre"/>
         <property name="password" column="password"/>

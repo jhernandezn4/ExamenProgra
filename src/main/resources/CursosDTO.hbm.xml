@@ -4,14 +4,14 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Progra2.CursosDTO" table="cursos" schema="public" catalog="examen">
+    <class name="Progra2.DTO.CursosDTO" table="cursos" schema="public" catalog="examen">
         <id name="codigo" column="codigo"/>
         <property name="nombre" column="nombre"/>
         <set name="asignaciones" inverse="true">
             <key>
                 <column name="codigo"/>
             </key>
-            <one-to-many not-found="ignore" class="Progra2.AsignacionesDTO"/>
+            <one-to-many not-found="ignore" class="Progra2.DTO.AsignacionesDTO"/>
         </set>
     </class>
 </hibernate-mapping>

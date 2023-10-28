@@ -7,10 +7,12 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
+
 public class Estudiantes {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Id
-    @Column(name = "idestudiante", nullable = false, precision = 0)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idestudiante", nullable = false, unique = true, precision = 0)
     private BigInteger idestudiante;
     @Basic
     @Column(name = "nombre", nullable = true, length = 255)

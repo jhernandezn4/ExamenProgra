@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Progra2.EstudianteDTO" table="estudiante" schema="public" catalog="examen">
+    <class name="Progra2.DTO.EstudianteDTO" table="estudiante" schema="public" catalog="examen">
         <id name="carnet" column="carnet"/>
         <property name="nombre" column="nombre"/>
         <property name="apellido" column="apellido"/>
@@ -12,7 +12,7 @@
             <key>
                 <column name="carnet"/>
             </key>
-            <one-to-many not-found="ignore" class="Progra2.AsignacionesDTO"/>
+            <one-to-many not-found="ignore" class="Progra2.DTO.AsignacionesDTO"/>
         </set>
     </class>
 </hibernate-mapping>

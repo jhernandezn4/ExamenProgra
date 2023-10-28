@@ -4,14 +4,14 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Progra2.AsignacionesDTO" table="asignaciones" schema="public" catalog="examen">
+    <class name="Progra2.DTO.AsignacionesDTO" table="asignaciones" schema="public" catalog="examen">
         <id name="idinscripcion" column="idinscripcion"/>
         <property name="carnet" column="carnet"/>
         <property name="codigo" column="codigo"/>
-        <many-to-one name="estudiante" class="Progra2.EstudianteDTO">
+        <many-to-one name="estudiante" class="Progra2.DTO.EstudianteDTO">
             <column name="carnet"/>
         </many-to-one>
-        <many-to-one name="curso" class="Progra2.CursosDTO">
+        <many-to-one name="curso" class="Progra2.DTO.CursosDTO">
             <column name="codigo"/>
         </many-to-one>
     </class>

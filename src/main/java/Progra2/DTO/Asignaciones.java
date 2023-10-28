@@ -18,10 +18,10 @@ public class Asignaciones {
     @Column(name = "idcurso", nullable = true, precision = 0)
     private BigInteger idcurso;
     @ManyToOne
-    @JoinColumn(name = "idestudiante", referencedColumnName = "idestudiante")
+    @JoinColumn(name = "idestudiante", insertable=false, updatable=false, referencedColumnName = "idestudiante")
     private Estudiantes estudiante;
     @ManyToOne
-    @JoinColumn(name = "idcurso", referencedColumnName = "idcurso")
+    @JoinColumn(name = "idcurso",insertable=false, updatable=false, referencedColumnName = "idcurso")
     private Cursos curso;
 
     public BigInteger getIdasignacion() {
