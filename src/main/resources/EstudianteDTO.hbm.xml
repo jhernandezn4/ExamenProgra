@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Progra2.EstudianteDTO" table="estudiante" schema="public" catalog="examen">
+        <id name="carnet" column="carnet"/>
+        <property name="nombre" column="nombre"/>
+        <property name="apellido" column="apellido"/>
+        <set name="asignaciones" inverse="true">
+            <key>
+                <column name="carnet"/>
+            </key>
+            <one-to-many not-found="ignore" class="Progra2.AsignacionesDTO"/>
+        </set>
+    </class>
+</hibernate-mapping>
